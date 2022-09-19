@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Welcome";
+}
+<h1>@ViewData["Title"]</h1>
+
+@model List<RegisteredUser>
+@{
+    foreach(RegisteredUser n in Model) 
+    {
+        if (n.Id == Model.Count()) 
+        {
+                <p>
+                Congratulations @n.FirstName! Present the clerk with your name and email address on future purchases to earn the 5% discount and rewards points!
+                </p>
+        }
+    }
+}
